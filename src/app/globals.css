@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-manrope), "Segoe UI", sans-serif;
+  --color-brand: #087f8c;
+  --color-brand-dark: #075e66;
+  --color-clinic-blue: #2463a6;
+  --color-mint: #eaf8f5;
+  --color-pale: #eff6fc;
+  --color-ink: #183344;
+  --color-muted: #647783;
+  --color-line: #e2ecef;
+  --color-deep: #10343c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #183344;
+  overflow-x: clip;
+}
+
+::selection {
+  background: #c9efe8;
+  color: #10343c;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: #087f8c;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
